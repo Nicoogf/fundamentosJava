@@ -271,7 +271,6 @@
 //     }
 // }
 
-
 // import javax.swing.*;
 // import java.awt.event.*; 
 
@@ -300,57 +299,538 @@
 //     }
 // }
 
+// import javax.swing.*;
+// import java.awt.event.*;
+
+// public class Formulario extends JFrame implements ActionListener{
+//     private JButton button_one , button_two , button_three ;
+//     private JLabel label_one ;
+
+//     public Formulario(){
+//       setLayout(null);
+//       button_one = new JButton("Button 1") ;
+//       button_one.setBounds(10,100,90,30);
+//       add(button_one);
+//       button_one.addActionListener(this);     
+
+//       button_two = new JButton("Button 2") ;
+//       button_two.setBounds(110,100,90,30) ;
+//       add(button_two) ;
+//       button_two.addActionListener(this) ;
+
+//       button_three = new JButton("Button 3");
+//       button_three.setBounds(210,100, 90, 30);
+//       add(button_three);
+//       button_three.addActionListener(this);
+
+//       label_one = new JLabel("En espera") ;
+//       label_one.setBounds(10, 10, 300, 30);
+//       add(label_one);
+//     }
+
+//     public void actionPerformed( ActionEvent e ) {
+//         if( e.getSource() == button_one){
+//             label_one.setText("Se apreto el button one");
+//         }
+//         else if ( e.getSource() == button_two){
+//             label_one.setText("Se apreto el button two");
+//         }
+//         else if ( e.getSource() == button_three) {
+//             label_one.setText("Se apretoel button three");
+//         }
+//         else{
+//             label_one.setText("algo salio mal");
+//         }
+//     }
+
+//     public static void main( String args []) {
+//         Formulario formulario = new Formulario() ;
+//         formulario.setBounds(0, 0, 350, 200);
+//         formulario.setVisible(true);
+//         formulario.setResizable(false);
+//         formulario.setLocationRelativeTo(null);
+//     }
+
+// }
+
+// import javax.swing.*;
+// import java.awt.event.*;
+
+// public class Formulario extends JFrame implements ActionListener {
+//     private JLabel label_uno;
+//     private JButton button_uno;
+//     private JTextField input_uno;
+
+//     public Formulario() {
+//         setLayout(null);
+//         label_uno = new JLabel("Usuario");
+//         label_uno.setBounds(10, 10, 100, 30);
+//         add(label_uno);
+
+//         input_uno = new JTextField();
+//         input_uno.setBounds(120, 17, 150, 20);
+//         add(input_uno);
+
+//         button_uno = new JButton("Aceptar");
+//         button_uno.setBounds(10, 80, 100, 30);
+//         add(button_uno);
+//         button_uno.addActionListener(this);
+//     }
+
+//     public void actionPerformed(ActionEvent e) {
+//         if (e.getSource() == button_uno) {
+//             String texto = input_uno.getText();
+//             setTitle(texto);
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         Formulario fomulario_uno = new Formulario();
+//         fomulario_uno.setBounds(0, 0, 300, 150);
+//         fomulario_uno.setVisible(true);
+//         fomulario_uno.setResizable(false);
+//         fomulario_uno.setLocationRelativeTo(null);
+//     }
+// }
+
+// import javax.swing.*;
+
+// public class Formulario extends JFrame{
+
+//     private JTextField input_uno ;
+//     private JTextArea area_uno ;
+
+//     public Formulario() {
+//         setLayout(null) ;
+//         input_uno = new JTextField() ;
+//         input_uno.setBounds(10,10,200,30);
+//         add(input_uno);
+
+//         area_uno = new JTextArea() ;
+//         area_uno.setBounds(10,50,400,300);
+//         add(area_uno);
+//     }
+
+//     public static void main( String args []) {
+//         Formulario formulario =  new Formulario() ;
+//         formulario.setBounds(0,0,540,400) ;
+//         formulario.setVisible(true) ;
+//         formulario.setResizable(false) ;
+//         formulario.setLocationRelativeTo(null);
+//     }
+// }
+
+// import javax.swing.*;
+
+// public class Formulario extends JFrame{
+
+//     private JTextField input_uno ; 
+//     private JTextArea area_uno ;
+//     private JScrollPane scroll_panel ;
+
+//     public Formulario(){
+
+//         setLayout(null);
+
+//         input_uno = new JTextField() ;
+//         input_uno.setBounds(10,10,200,30);
+//         add(input_uno) ;
+
+//         area_uno = new JTextArea();
+//         scroll_panel = new JScrollPane( area_uno ) ;
+//         scroll_panel.setBounds(10, 50, 400, 300);
+//         add(scroll_panel) ;
+//     }
+
+//     public static void main( String args[]) {
+//         Formulario formulario = new Formulario();
+//         formulario.setBounds(0,0,540,400);
+//         formulario.setVisible(true);
+//         formulario.setResizable(true);
+//         formulario.setLocationRelativeTo(null);
+//     }
+// }
+
+// import javax.swing.*;
+// import java.awt.event.*;;
+
+// public class Formulario extends JFrame implements ActionListener {
+
+//     private JTextField input_uno ;
+//     private JTextArea area_uno ;
+//     private JScrollPane scroll_panel ;
+//     private JButton  button_uno ;
+
+//     String texto = "" ;
+
+//     public Formulario () {        
+//         setLayout(null);
+
+//         input_uno = new JTextField() ;
+//         input_uno.setBounds(10,10,200,30) ;
+//         add(input_uno) ;
+
+//         button_uno= new JButton("Agregar");
+//         button_uno.setBounds(250,10,100,30);
+//         add(button_uno) ;
+//         button_uno.addActionListener(this);
+
+//         area_uno = new JTextArea() ;
+//         scroll_panel = new JScrollPane(area_uno) ;
+//         scroll_panel.setBounds(10,50,400,300);
+//         add(scroll_panel);
+//     }
+
+//     public void actionPerformed(ActionEvent e) {
+//         if(e.getSource() == button_uno) {
+//             texto += input_uno.getText() + "\n";
+//             area_uno.setText(texto) ;
+//             input_uno.setText("");
+//         }
+//     }
+
+//     public static void main( String args[]){
+//         Formulario formulario = new Formulario();
+//         formulario.setBounds(0,0,540,400);
+//         formulario.setVisible(true);
+//         formulario.setResizable(false);
+//         formulario.setLocationRelativeTo(null);
+//     }
+// }
+
+// import javax.swing.*;
+// import java.awt.event.*;
+
+// public class Formulario extends JFrame implements ActionListener {
+//     private JTextField input_uno, input_dos, input_tres;
+//     private JLabel label_uno, label_dos, label_tres;
+//     private JButton boton_uno;
+
+//     public Formulario() {
+//         setLayout(null);
+//         label_uno = new JLabel("Valor uno : ");
+//         label_uno.setBounds(50, 5, 100, 30);
+//         add(label_uno);
+
+//         label_dos = new JLabel("Valor dos :");
+//         label_dos.setBounds(50, 35, 100, 30);
+//         add(label_dos);
+
+//         label_tres = new JLabel("Resultado");
+//         label_tres.setBounds(120, 80, 100, 30);
+//         add(label_tres);
+
+//         input_uno = new JTextField();
+//         input_uno.setBounds(120, 10, 150, 20);
+//         add(input_uno);
+
+//         input_dos = new JTextField();
+//         input_dos.setBounds(120, 10, 150, 20);
+//         add(input_dos);
+
+//         input_tres = new JTextField();
+//         input_tres.setBounds(120, 40, 150, 20);
+//         add(input_tres);
+
+//         boton_uno = new JButton("Sumar") ;
+//         boton_uno.setBounds(10,80,100,30);
+//         add(boton_uno) ;
+//         boton_uno.addActionListener(this);
+//     }
+
+//     public void actionPerformed( ActionEvent e ) {
+//         if( e.getSource() == boton_uno ) {
+//             int valor_uno = 0 , valor_dos = 0 , resultado = 0 ;
+            
+//             valor_uno = Integer.parseInt(input_uno.getText()) ;
+//             valor_dos = Integer.parseInt(input_dos.getText()) ;
+
+//             resultado = valor_uno + valor_dos ;
+            
+//             label_tres.setText("Resultado : " + resultado);
+//         }
+//     }
+
+//     public static void main(String args[]){
+//         Formulario formulario = new Formulario() ;
+//         formulario.setBounds(0, 0, 300, 150);
+//         formulario.setVisible(true);
+//         formulario.setResizable(false);
+//         formulario.setLocationRelativeTo(null);
+        
+//     }
+ 
+// }
+
+
+// import javax.swing.*;
+// import java.awt.event.*;
+
+// public class Formulario extends JFrame implements ActionListener {
+//     private JTextField input_uno, input_dos;
+//     private JLabel label_uno, label_dos, label_tres;
+//     private JButton boton_uno;
+
+//     public Formulario() {
+//         setLayout(null);
+//         label_uno = new JLabel("Valor uno : ");
+//         label_uno.setBounds(50, 5, 100, 30);
+//         add(label_uno);
+
+//         label_dos = new JLabel("Valor dos :");
+//         label_dos.setBounds(50, 35, 100, 30);
+//         add(label_dos);
+
+//         label_tres = new JLabel("Resultado");
+//         label_tres.setBounds(120, 80, 150, 30);
+//         add(label_tres);
+
+//         input_uno = new JTextField();
+//         input_uno.setBounds(120, 10, 150, 20);
+//         add(input_uno);
+
+//         input_dos = new JTextField();
+//         input_dos.setBounds(120, 40, 150, 20);
+//         add(input_dos);
+
+//         boton_uno = new JButton("Sumar");
+//         boton_uno.setBounds(10, 80, 100, 30);
+//         add(boton_uno);
+//         boton_uno.addActionListener(this);
+//     }
+
+//     public void actionPerformed(ActionEvent e) {
+//         if (e.getSource() == boton_uno) {
+           
+//                 int valor_uno = Integer.parseInt(input_uno.getText());
+//                 int valor_dos = Integer.parseInt(input_dos.getText());
+
+//                 int resultado = valor_uno + valor_dos;
+
+//                 label_tres.setText("Resultado: " + resultado);
+         
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         Formulario formulario = new Formulario();
+//         formulario.setBounds(0, 0, 300, 150);
+//         formulario.setVisible(true);
+//         formulario.setResizable(false);
+//         formulario.setLocationRelativeTo(null);
+//     }
+// }
+
+
+
+// import javax.swing.* ;
+
+// import java.awt.ItemSelectable;
+// import java.awt.event.*;
+
+// public class Formulario extends JFrame implements ItemListener {
+
+//     private JComboBox<String> combo_box ;
+
+//     public Formulario() {
+//         setLayout(null) ;
+//         combo_box = new JComboBox<>() ;
+//         combo_box.setBounds(10,10,80,20);
+//         add(combo_box) ;
+
+//         combo_box.addItem("Rojo") ;
+//         combo_box.addItem("Azul") ;
+//         combo_box.addItem("Verde") ;
+//         combo_box.addItem("Amarillo") ;
+//         combo_box.addItem("Negro") ;
+
+//         combo_box.addItemListener(this);
+//     }
+
+//     @Override
+//     public void itemStateChange( ItemEvent e ) {
+//         if ( e.getSource() == combo_box){
+//             String seleccion = combo_box.getSelectedItem().toString() ;
+//             setTitle(seleccion);
+//         }
+//     }
+
+//     public static void main ( String args []) {
+//         Formulario formulario = new Formulario(); 
+//         formulario.setBounds(0,0,200,150);
+//         formulario.setVisible(true);
+//         formulario.setResizable(false);
+//         formulario.setLocationRelativeTo(null);
+//     }
+// }
+
+// import javax.swing.*;
+// import java.awt.event.*;
+
+// public class Formulario extends JFrame implements ItemListener {
+
+//     private JComboBox<String> combo_box;
+
+//     public Formulario() {
+//         setLayout(null);
+//         combo_box = new JComboBox<>();
+//         combo_box.setBounds(10, 10, 80, 20);
+//         add(combo_box);
+
+//         combo_box.addItem("Rojo");
+//         combo_box.addItem("Azul");
+//         combo_box.addItem("Verde");
+//         combo_box.addItem("Amarillo");
+//         combo_box.addItem("Negro");
+
+//         combo_box.addItemListener(this);
+//     }
+
+//     @Override
+//     public void itemStateChanged(ItemEvent e) {
+//         if (e.getStateChange() == ItemEvent.SELECTED) {
+//             String seleccion = combo_box.getSelectedItem().toString();
+//             setTitle(seleccion);
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         Formulario formulario = new Formulario();
+//         formulario.setBounds(0, 0, 400, 150);
+//         formulario.setVisible(true);
+//         formulario.setResizable(false);
+//         formulario.setLocationRelativeTo(null);
+//     }
+// }
+
+
+// import javax.swing.*;
+// import java.awt.*;
+// import java.awt.event.* ;
+
+
+// public class Formulario extends JFrame implements ActionListener{
+//     private JLabel label1, label2, label3 ;
+//     private JComboBox combo1 , combo2 , combo3 ;
+//     private JButton boton1 ;
+
+//     public Formulario() {
+//         setLayout(null);
+//         label1 = new JLabel("Rojo") ;
+//         label1.setBounds(10,10,100,10);
+//         add(label1) ;
+
+//         combo1 = new JComboBox<>();
+//         combo1.setBounds(120,10,50,30);
+//         for( int i = 0 ; i <= 255 ; i ++) {
+//             combo1.addItem(String.valueOf(i));
+//         }
+//         add(combo1) ;
+
+//         label2 = new JLabel("Verde") ;
+//         label2.setBounds(10,50,100,10);
+//         add(label2) ;
+
+//         combo2 = new JComboBox<>();
+//         combo2.setBounds(120,50,50,30);
+//         for( int i = 0 ; i <= 255 ; i ++) {
+//             combo2.addItem(String.valueOf(i));
+//         }
+//         add(combo2) ;
+
+        
+//         label3 = new JLabel("Azul") ;
+//         label3.setBounds(10,90,100,10);
+//         add(label3) ;
+
+//         combo3 = new JComboBox<>();
+//         combo3.setBounds(120,90,50,30);
+//         for( int i = 0 ; i <= 255 ; i ++) {
+//             combo3.addItem(String.valueOf(i));
+//         }
+//         add(combo3) ;
+
+//         boton1 = new JButton("Fijar Color") ;
+//         boton1.setBounds(10,130,100,30);
+//         add(boton1) ;
+
+//         boton1.addActionListener(this) ;
+//     }
+
+//     public void actionPerformed(ActionEvent e ) {
+//         if(e.getSource() == boton1) {
+//             String cad1 = combo1.getSelectedItem().toString() ;
+//             String cad2 = combo2.getSelectedItem().toString() ;
+//             String cad3 =  combo3.getSelectedItem().toString() ;
+
+//             int rojo = Integer.parseInt(cad1) ;
+//             int verde = Integer.parseInt(cad2) ;
+//             int azul = Integer.parseInt(cad3) ;
+
+//             Color color1 = new Color(rojo,verde,azul) ;
+//             boton1.setBackground(color1);
+//         }
+//     }
+
+//     public static void main(String args []) {
+//         Formulario formulario = new Formulario() ;
+//         formulario.setBounds(0,0,190,220);
+//         formulario.setVisible(true);
+//         formulario.setResizable(false);
+//         formulario.setLocationRelativeTo(null);
+//     }
+// }
+
 import javax.swing.*;
+import java.awt.* ;
 import java.awt.event.*;
 
 public class Formulario extends JFrame implements ActionListener{
-    private JButton button_one , button_two , button_three ;
-    private JLabel label_one ;
+
+    private JMenuBar menubar ;
+    private JMenu menu1 ;
+    private JMenuItem menuItem1, menuItem2, menuItem3 ;
 
     public Formulario(){
-      setLayout(null);
-      button_one = new JButton("Button 1") ;
-      button_one.setBounds(10,100,90,30);
-      add(button_one);
-      button_one.addActionListener(this);     
+        setLayout(null);
+        menubar = new JMenuBar() ;
+        setJMenuBar(menubar);
 
-      button_two = new JButton("Button 2") ;
-      button_two.setBounds(110,100,90,30) ;
-      add(button_two) ;
-      button_two.addActionListener(this) ;
+        menu1 = new JMenu("Opciones") ;
+        menubar.add(menu1) ;
 
-      button_three = new JButton("Button 3");
-      button_three.setBounds(210,100, 90, 30);
-      add(button_three);
-      button_three.addActionListener(this);
+        menuItem1 = new JMenuItem("Rojo") ;
+        menuItem1.addActionListener(this) ;
+        menu1.add(menuItem1) ;
 
-      label_one = new JLabel("En espera") ;
-      label_one.setBounds(10, 10, 300, 30);
-      add(label_one);
+        
+        menuItem2 = new JMenuItem("Verde") ;
+        menuItem2.addActionListener(this) ;
+        menu1.add(menuItem2) ;
+
+        menuItem3 = new JMenuItem("Azul") ;
+        menuItem3.addActionListener(this) ;
+        menu1.add(menuItem3) ;
     }
 
-    public void actionPerformed( ActionEvent e ) {
-        if( e.getSource() == button_one){
-            label_one.setText("Se apreto el button one");
+    public void actionPerformed(ActionEvent e) {
+        Container fondo = this.getContentPane() ;
+        if(e.getSource() == menuItem1){
+            fondo.setBackground(new Color(255,0,0));
         }
-        else if ( e.getSource() == button_two){
-            label_one.setText("Se apreto el button two");
+        if(e.getSource() == menuItem2) {
+            fondo.setBackground(new Color(0,255,0));
         }
-        else if ( e.getSource() == button_three) {
-            label_one.setText("Se apretoel button three");
-        }
-        else{
-            label_one.setText("algo salio mal");
+        if(e.getSource() == menuItem3) {
+            fondo.setBackground(new Color(0,0,255));
         }
     }
 
-    public static void main( String args []) {
+    public static void main ( String args[]) {
         Formulario formulario = new Formulario() ;
-        formulario.setBounds(0, 0, 350, 200);
+        formulario.setBounds(0, 0, 400, 300);
         formulario.setVisible(true);
-        formulario.setResizable(false);
         formulario.setLocationRelativeTo(null);
     }
-
-
+  
 }
