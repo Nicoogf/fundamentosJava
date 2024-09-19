@@ -835,66 +835,217 @@
   
 // }
 
-import javax.swing.*;
-import java.awt.* ;
-import java.awt.event.*;
+// import javax.swing.*;
+// import java.awt.* ;
+// import java.awt.event.*;
 
-public class Formulario extends JFrame implements ActionListener{
-    private JMenuBar menubar ;
-    private JMenu menu1,menu2,menu3 ;
-    private JMenuItem menuItem1 , menuItem2, menuItem3 , menuItem4 ;
+// public class Formulario extends JFrame implements ActionListener{
+//     private JMenuBar menubar ;
+//     private JMenu menu1,menu2,menu3 ;
+//     private JMenuItem menuItem1 , menuItem2, menuItem3 , menuItem4 ;
 
-    public Formulario() {
-        setLayout(null) ;
-        menubar = new JMenuBar() ;
-        setJMenuBar(menubar);
+//     public Formulario() {
+//         setLayout(null) ;
+//         menubar = new JMenuBar() ;
+//         setJMenuBar(menubar);
 
-        menu1 = new JMenu("Opciones") ;
-        menubar.add(menu1);
+//         menu1 = new JMenu("Opciones") ;
+//         menubar.add(menu1);
 
-        menu2 = new JMenu("Tamaño de la ventana") ;
-        menu1.add(menu2) ;
+//         menu2 = new JMenu("Tamaño de la ventana") ;
+//         menu1.add(menu2) ;
 
-        menu3 = new JMenu("Color de fondo") ;
-        menu1.add(menu3) ;
+//         menu3 = new JMenu("Color de fondo") ;
+//         menu1.add(menu3) ;
 
-        menuItem1 = new JMenuItem("320x480") ;
-        menu2.add(menuItem1) ;
-        menuItem1.addActionListener(this);
+//         menuItem1 = new JMenuItem("320x480") ;
+//         menu2.add(menuItem1) ;
+//         menuItem1.addActionListener(this);
 
-        menuItem2 = new JMenuItem("480x640") ;
-        menu2.add(menuItem2) ;
-        menuItem2.addActionListener(this);
+//         menuItem2 = new JMenuItem("480x640") ;
+//         menu2.add(menuItem2) ;
+//         menuItem2.addActionListener(this);
 
-        menuItem3 = new JMenuItem("Rojo") ;
-        menu3.add(menuItem3) ;
-        menuItem3.addActionListener(this);
+//         menuItem3 = new JMenuItem("Rojo") ;
+//         menu3.add(menuItem3) ;
+//         menuItem3.addActionListener(this);
 
-        menuItem4 = new JMenuItem("Verde") ;
-        menu3.add(menuItem4) ;
-        menuItem4.addActionListener(this);
-    }
+//         menuItem4 = new JMenuItem("Verde") ;
+//         menu3.add(menuItem4) ;
+//         menuItem4.addActionListener(this);
+//     }
 
-    public void actionPerformed(ActionEvent e ) {
-        if( e.getSource() == menuItem1) {
-            setSize(320 , 480);
-        }
-        if( e.getSource() == menuItem2) {
-            setSize(480 , 640);
-        }
-        if( e.getSource() == menuItem3) {
-            getContentPane().setBackground( new Color(255,0,0) );
-        }
-        if( e.getSource() == menuItem4) {
-            getContentPane().setBackground( new Color(0,255,0) );
-        }
-    }
+//     public void actionPerformed(ActionEvent e ) {
+//         if( e.getSource() == menuItem1) {
+//             setSize(320 , 480);
+//         }
+//         if( e.getSource() == menuItem2) {
+//             setSize(480 , 640);
+//         }
+//         if( e.getSource() == menuItem3) {
+//             getContentPane().setBackground( new Color(255,0,0) );
+//         }
+//         if( e.getSource() == menuItem4) {
+//             getContentPane().setBackground( new Color(0,255,0) );
+//         }
+//     }
 
-    public static void main(String args[]) {
-        Formulario formulario = new Formulario() ;
-        formulario.setBounds(0,0,300,300);
-        formulario.setVisible(true);
-        formulario.setResizable(false);
-        formulario.setLocationRelativeTo(null);
-    }
-}
+//     public static void main(String args[]) {
+//         Formulario formulario = new Formulario() ;
+//         formulario.setBounds(0,0,300,300);
+//         formulario.setVisible(true);
+//         formulario.setResizable(false);
+//         formulario.setLocationRelativeTo(null);
+//     }
+// }
+
+// import javax.swing.*;
+// import javax.swing.event.*;
+
+// public class Formulario extends JFrame implements ChangeListener{
+//     private JCheckBox check1, check2 , check3 ;
+
+//     public Formulario() {
+//         setLayout(null);
+//         check1 = new JCheckBox("Ingles") ;
+//         check1.setBounds(10,10,150,30);
+//         check1.addChangeListener(this);
+//         add(check1);
+
+//         check2 = new JCheckBox("Frances") ;
+//         check2.setBounds(10,50,150,30);
+//         check2.addChangeListener(this);
+//         add(check2);
+
+//         check3 = new JCheckBox("Aleman") ;
+//         check3.setBounds(10,90,150,30);
+//         check3.addChangeListener(this);
+//         add(check3);
+//     }
+
+//     public void stateChanged( ChangeEvent e ) {
+//         String cad = "" ;
+//         if(check1.isSelected() == true ) {
+//             cad = cad + "Ingles-" ;
+//         }
+//         if(check2.isSelected() == true) {
+//             cad = cad + "Frances-" ;
+//         }
+//         if(check3.isSelected() == true) {
+//             cad = cad + "Aleman-" ;
+//         }   
+//         setTitle(cad);
+//     }
+
+//     public static void main( String args []) {
+//         Formulario formulario = new Formulario() ;
+//         formulario.setBounds(0,0,400,400);
+//         formulario.setVisible(true);
+//         formulario.setResizable(false);
+//         formulario.setLocationRelativeTo(null);
+//     }
+// }
+
+// import javax.swing.*;
+// import javax.swing.event.*; 
+// import java.awt.event.*;
+
+// public class Formulario extends JFrame implements ActionListener,ChangeListener{
+//     private JLabel label1 ;
+//     private JCheckBox check1 ; 
+//     private JButton boton1 ;
+
+//     public Formulario() {
+//         setLayout(null);
+//         label1 = new JLabel("Aceptar terminos y condiciones") ;
+//         label1.setBounds(10,10,400,30);
+//         add(label1) ;
+
+//         check1 = new JCheckBox("Acepto") ;
+//         check1.setBounds(10,50,100,30);
+//         check1.addChangeListener(this);
+//         add(check1) ;
+
+//         boton1 = new JButton("Continuar") ;
+//         boton1.setBounds(10,100,100,30) ;
+//         add(boton1) ;
+//         boton1.addActionListener(this);
+//         boton1.setEnabled(false);
+
+//     } 
+
+//     public void stateChanged( ChangeEvent e ){
+//         if( check1.isSelected() ==  true ){
+//             boton1.setEnabled(true);
+//         }else{
+//             boton1.setEnabled(false);
+//         }
+//     }
+
+//     public void actionPerformed( ActionEvent e ) {
+//         if( e.getSource() == boton1 ) {
+//             System.exit(0);
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         Formulario formulario = new Formulario() ;
+//         formulario.setBounds(0,0,400,400);
+//         formulario.setVisible(true);
+//         formulario.setLocationRelativeTo(null);
+//         formulario.setResizable(false);
+//     }
+ 
+// }
+
+
+
+// import javax.swing.* ;
+// import javax.swing.event.* ;
+
+// public class Formulario extends JFrame implements ChangeListener{
+//     private JRadioButton radio1, radio2, radio3 ;
+//     private ButtonGroup bg ;
+
+//     public Formulario() {
+//         setLayout(null);
+//         bg = new ButtonGroup() ;
+//         radio1 = new JRadioButton("480x320") ;
+//         radio1.setBounds(10,20,100,30);
+//         radio1.addChangeListener(this);
+//         add(radio1);
+//         bg.add(radio1);
+
+//         radio2= new JRadioButton("640x480") ;
+//         radio2.setBounds(10,70,100,30);
+//         radio2.addChangeListener(this);
+//         add(radio2);
+//         bg.add(radio2);
+
+//         radio3 = new JRadioButton("800x600") ;
+//         radio3.setBounds(10,130,100,30);
+//         radio3.addChangeListener(this);
+//         add(radio3);
+//         bg.add(radio3);
+//     }
+
+
+//     public void stateChanged( ChangeEvent e) {
+//         if(radio1.isSelected()){
+//             setSize(480,320);
+//         }
+//         if(radio2.isSelected()){
+//             setSize(640,480);
+//         }
+//         if(radio3.isSelected()){
+//             setSize(800,600);
+//         }
+//     }
+//     public static void main ( String args[]) {
+//         Formulario formulario = new Formulario() ;
+//         formulario.setVisible(true);
+//         formulario.setBounds(0,0,400,400);
+//         formulario.setLocationRelativeTo(null);
+//         formulario.setResizable(false);
+//     }
+// }
